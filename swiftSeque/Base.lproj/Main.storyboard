@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q9S-jo-tIS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="78u-pC-nQU">
+            <objects>
+                <navigationController id="q9S-jo-tIS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" translucent="NO" id="Jyt-0Z-3C1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yyH-EU-woC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdu-73-G87" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="385"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="swiftSeque" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-P1-QLh">
+                                <rect key="frame" x="104" y="167" width="117" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="pushFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6oy-bg-ufO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PWf-P1-QLh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="88" id="Wqg-cW-Rp8"/>
+                            <constraint firstItem="PWf-P1-QLh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="167" id="ch9-P5-VAK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PWf-P1-QLh" secondAttribute="trailing" constant="83" id="ho9-Lm-Dut"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ezo-5T-3B3"/>
+                    <connections>
+                        <segue destination="bOP-Ma-zxm" kind="push" identifier="pushfirst" id="eWe-6s-msq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="365"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="0Bs-TF-KLF">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bOP-Ma-zxm" customClass="SecondViewController" customModule="swiftSeque" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTL-uv-VVp"/>
+                        <viewControllerLayoutGuide type="bottom" id="7tC-nS-5Dg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5PP-vy-GSa">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKC-zN-xFL">
+                                <rect key="frame" x="113" y="247" width="95" height="30"/>
+                                <state key="normal" title="SecondPush">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushSecond:" destination="bOP-Ma-zxm" eventType="touchUpInside" id="K8e-H1-vZ2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21960784310000001" green="0.64313725489999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7tC-nS-5Dg" firstAttribute="top" secondItem="jKC-zN-xFL" secondAttribute="bottom" constant="227" id="2Jh-pI-JTN"/>
+                            <constraint firstItem="jKC-zN-xFL" firstAttribute="centerX" secondItem="5PP-vy-GSa" secondAttribute="centerX" id="Fav-r9-XOp"/>
+                            <constraint firstItem="jKC-zN-xFL" firstAttribute="leading" secondItem="5PP-vy-GSa" secondAttribute="leadingMargin" constant="97" id="aGA-cR-Cn8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yED-ka-28F"/>
+                    <connections>
+                        <segue destination="Blj-Ga-t5p" kind="push" identifier="PsuhThird" id="pT3-Se-gmq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZf-0Y-p8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531" y="365"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="1co-rE-MuL">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Blj-Ga-t5p" customClass="ThirdViewController" customModule="swiftSeque" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="weZ-nQ-SM9"/>
+                        <viewControllerLayoutGuide type="bottom" id="WBp-Mm-Efd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uKT-8K-omH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.58431372550000005" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="bEe-Ly-JF0">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Tao-wb-dAa">
+                            <connections>
+                                <action selector="Logout:" destination="Blj-Ga-t5p" id="PEC-xP-33r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksy-AW-Qsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="329"/>
+        </scene>
+    </scenes>
+</document>
